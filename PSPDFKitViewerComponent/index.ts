@@ -1,4 +1,5 @@
 import {IInputs, IOutputs} from "./generated/ManifestTypes";
+import * as PSPDFKit from "pspdfkit";
  
 export class PSPDFKitViewerComponent implements ComponentFramework.StandardControl<IInputs, IOutputs> {
  
@@ -41,11 +42,11 @@ export class PSPDFKitViewerComponent implements ComponentFramework.StandardContr
     public async PSPDFKit(context: ComponentFramework.Context<IInputs>)
     {
             const PSPDFKit = await import("pspdfkit/dist/modern/pspdfkit");
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-            // @ts-ignore
+            //eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            //@ts-ignore
             PSPDFKit.unload(".pspdfkit-container");
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-            // @ts-ignore
+            //eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            //@ts-ignore
             PSPDFKit.load({
                             disableWebAssemblyStreaming: true,
                             baseUrl : "https://unpkg.com/pspdfkit/dist/",
@@ -124,7 +125,7 @@ export class PSPDFKitViewerComponent implements ComponentFramework.StandardContr
      */
     public getOutputs(): IOutputs
     {
-        const result =  {
+        let result =  {
             pdfdocument : this.pdfBase64
         };
         return result;
