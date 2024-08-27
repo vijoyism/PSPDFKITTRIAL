@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="PSPDFKitViewerComponent" constructor="PSPDFKitViewerComponent" version="0.0.1" display-name-key="PSPDFKitViewerComponent" description-key="PSPDFKitViewerComponent description" control-type="standard">
+    <property name="document" display-name-key="document" description-key="document" of-type="SingleLine.Text" usage="input" required="true" />
+    <property name="viewerwidth" display-name-key="viewerwidth" description-key="viewerwidth" of-type="SingleLine.Text" usage="input" required="true" default-value="600"/>
+    <property name="viewerheight" display-name-key="viewerheight" description-key="viewerheight" of-type="SingleLine.Text" usage="input" required="true" default-value="600"/>
+    <property name="pdfdocument" display-name-key="pdfdocument" description-key="pdfdocument" of-type="Multiple" usage="bound" />      
+    <resources>
+      <code path="index.ts" order="1"/>
+    </resources>
+  </control>
+</manifest>

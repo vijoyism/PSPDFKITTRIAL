@@ -1,0 +1,1 @@
+declare module "pspdfkit/dist/modern/pspdfkit"
